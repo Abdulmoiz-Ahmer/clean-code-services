@@ -1,0 +1,31 @@
+{
+	"name": "clean-code-services",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git",
+	"author": "Abdulmoiz <abdulmoizahmer1996@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "node index.js",
+		"seed": "node src/db/mongodb/seeds/account-seed.js",
+		"format": "npx prettier --write \"./**/*.js\"",
+		"lint": "eslint \"./**/*.js\"",
+		"test": "jest --forceExit",
+		"test:unit": "jest /tests/unit --forceExit",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"faker": "^5.5.3",
+		"jest": "^27.3.1",
+		"joi": "^17.4.2",
+		"kill-port": "^1.6.1",
+		"mongoose": "^6.0.12",
+		"nodemon": "^2.0.15",
+		"supertest": "^6.1.6"
+	},
+	"devDependencies": {
+		"husky": "^7.0.0"
+	}
+}
