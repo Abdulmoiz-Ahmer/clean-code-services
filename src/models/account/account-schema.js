@@ -8,7 +8,7 @@ module.exports = Joi.object().keys({
 	email: Joi.string().email().required(),
 	password: Joi.string()
 		// .regex(new RegExp('/^(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/g'))
-		.required(),
+		.required()
 		// .messages({
 		// 	'string.pattern.base': `Oops! You need a password longer than 8 characters with numbers and letters (One Uppercase, One Lowercase, One Number)`,
 		// }),

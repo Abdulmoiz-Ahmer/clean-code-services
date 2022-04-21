@@ -44,12 +44,11 @@ const addAccount = async (accountInfo) => {
 		name: account.info.getName(),
 		phone: account.info.getPhone(),
 		email: account.info.getEmail(),
-		password: account.info.getPassword(),
 	};
 
-	crypto
+	newAccount.password = crypto
 		.createHmac('sha256', config.cryptoSecret)
-		.update(password)
+		.update(account.info.getPassword())
 		.digest('hex');
 
 	delete account.info;

@@ -9,7 +9,7 @@ describe('checking whether account is created', () => {
 			firstName: acc.name.first,
 			lastName: acc.name.last,
 			phoneNumber: acc.phone.primary,
-			password: 'Password786',
+			password: acc.password,
 		};
 		delete dummyAccount.name;
 		delete dummyAccount.phone;

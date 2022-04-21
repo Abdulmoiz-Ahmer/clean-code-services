@@ -9,7 +9,7 @@ const fakeAccount = function () {
 		phone: {
 			primary: faker.phone.phoneNumber('(###) ###-####'),
 		},
-		password: faker.internet.password(8, false),
+		password: 'Password123',
 	};
 
 	account.email = faker.internet.email(account.firstName, account.lastName);

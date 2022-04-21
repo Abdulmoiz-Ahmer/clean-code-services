@@ -1,4 +1,5 @@
 let validator = (schema) => (payload) => {
+	console.log(payload, 'payload');
 	let { error } = schema.validate(payload, { abortEarly: false });
 
 	if (error) {
