@@ -5,10 +5,11 @@ describe('checking whether account is created', () => {
 	test('must have all expected properties of the account', () => {
 		const acc = fakeAccount();
 		const dummyAccount = {
+			...acc,
 			firstName: acc.name.first,
 			lastName: acc.name.last,
 			phoneNumber: acc.phone.primary,
-			...acc,
+			password: 'Password786',
 		};
 		delete dummyAccount.name;
 		delete dummyAccount.phone;

@@ -7,7 +7,7 @@ const fakeAccount = function () {
 			last: faker.name.lastName(),
 		},
 		phone: {
-			primary: faker.phone.phoneNumber('(###)-###-###'),
+			primary: faker.phone.phoneNumber('(###) ###-####'),
 		},
 		password: faker.internet.password(8, false),
 	};
