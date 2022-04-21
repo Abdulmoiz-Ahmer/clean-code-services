@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 const pingRoutes = require('./ping-routes');
 const accountRoutes = require('./account-routes');

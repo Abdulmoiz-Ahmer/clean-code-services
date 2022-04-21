@@ -1,4 +1,3 @@
-const faker = require('faker');
 const { fakeAccount, makeAccount } = require('../../../../src/models/account');
 
 describe('checking whether account is created', () => {

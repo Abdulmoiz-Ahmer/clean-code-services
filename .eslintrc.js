@@ -3,7 +3,11 @@ module.exports = {
 		browser: true,
 		es2021: true,
 		node: true,
-		mocha: true,
+		jest: true,
+	},
+	rules: {
+		'no-console': 'off',
+		'no-underscore-dangle': 'off',
 	},
 
 	extends: ['airbnb-base', 'prettier'],
@@ -11,9 +15,4 @@ module.exports = {
 		ecmaVersion: 12,
 	},
 	plugins: ['prettier'],
-	settings: {
-		'import/resolver': {
-			'babel-module': {},
-		},
-	},
 };

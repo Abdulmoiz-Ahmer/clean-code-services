@@ -1,6 +1,6 @@
 const faker = require('faker');
 
-const fakeAccount = function () {
+const fakeAccount = () => {
 	const account = {
 		name: {
 			first: faker.name.firstName(),

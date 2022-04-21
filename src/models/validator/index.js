@@ -1,9 +1,8 @@
-let validator = (schema) => (payload) => {
-	console.log(payload, 'payload');
-	let { error } = schema.validate(payload, { abortEarly: false });
+const validator = (schema) => (payload) => {
+	const { error } = schema.validate(payload, { abortEarly: false });
 
 	if (error) {
-		let errors = error.details.map((el) => ({
+		const errors = error.details.map((el) => ({
 			field: el.path[0],
 			message: el.message.replace('"', '').replace('"', '').toLowerCase(),
 		}));

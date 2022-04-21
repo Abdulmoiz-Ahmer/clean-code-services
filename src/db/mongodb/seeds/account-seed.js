@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
-const faker = require('faker');
-const { fakeAccount } = require('../../../models/Account');
+const { fakeAccount } = require('../../../models/account');
 const account = require('../models/account');
 
 // Seeder using async await
-const seedDatabase = async function () {
+const seedDatabase = async () => {
 	const accounts = [];
 
-	for (let i = 0; i < 5; i++) {
+	for (let i = 0; i < 5; i += 1) {
 		const data = {
 			...fakeAccount(),
 		};
-		const account = accounts.push(data);
+		accounts.push(data);
 	}
 
 	await account.create(accounts);
@@ -19,7 +18,7 @@ const seedDatabase = async function () {
 
 // Drop DB then seed
 
-mongoose.connection.dropCollection('accounts', async function () {
+mongoose.connection.dropCollection('accounts', async () => {
 	await seedDatabase();
 	mongoose.connection.close();
 });

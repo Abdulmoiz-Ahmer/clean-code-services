@@ -1,4 +1,3 @@
-const faker = require('faker');
 const { fakeAccount } = require('../../../../src/models/account');
 const validator = require('../../../../src/models/validator');
 const schema = require('../../../../src/models/account/account-schema');

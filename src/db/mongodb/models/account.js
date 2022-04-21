@@ -1,4 +1,4 @@
-let mongoose = require('../connection');
+const mongoose = require('../connection');
 
 const AccountSchema = new mongoose.Schema({
 	name: {

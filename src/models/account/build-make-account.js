@@ -1,6 +1,6 @@
-const buildMakeAccount = function (accountValidator) {
+function buildMakeAccount(accountValidator) {
 	return ({ firstName, lastName, phoneNumber, email, password } = {}) => {
-		let { errors } = accountValidator({
+		const { errors } = accountValidator({
 			firstName,
 			lastName,
 			phoneNumber,
@@ -26,6 +26,6 @@ const buildMakeAccount = function (accountValidator) {
 			status: 200,
 		};
 	};
-};
+}
 
 module.exports = buildMakeAccount;

@@ -11,9 +11,9 @@
     <br />
     <!-- <a href="https://todo.api.cryptobros.site/api/ping">View Demo</a> -->
     ·
-    <a href="https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git/issues">Report Bug</a>
+    <a href="https://github.com/Abdulmoiz-Ahmer/clean-code-services.git/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git/issues">Request Feature</a>
+    <a href="https://github.com/Abdulmoiz-Ahmer/clean-code-services.git/issues">Request Feature</a>
   </p>
 </div>
 
@@ -66,8 +66,8 @@ Few words about the above architecture:
 For Deployment
 
 -   Husky pre-push to trigger tests
--   CircleCI pipeline to trigger deployment on push
--   Digital Ocean Droplet
+<!-- -   CircleCI pipeline to trigger deployment on push
+-   Digital Ocean Droplet -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -96,7 +96,7 @@ For Deployment
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git
+    git clone https://github.com/Abdulmoiz-Ahmer/clean-code-services.git
     ```
 2. Install NPM packages
     ```sh
@@ -109,6 +109,7 @@ For Deployment
     DATABASE_USER=
     DATABASE_PASSWORD=
     DATABASE_PORT=
+    CRYPTO_SECRET=
     ```
 4. To seed database run
     ```js
@@ -117,10 +118,8 @@ For Deployment
 5. To run
 
     ```js
-    yarn start
-      or
-    docker build . -t test-api;
-    docker run -p 4000:4000 test-api;
+
+    docker-compose -f server.yaml up
 
     ```
 
@@ -130,7 +129,7 @@ For Deployment
 
 ## Usage
 
-This repository has been used with a [test app]() and it's [repository.](https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git)
+This repository has been used with a [test app]() and it's [repository.](https://github.com/Abdulmoiz-Ahmer/clean-code-services.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -186,7 +185,7 @@ Distributed under the MIT License.
 
 Your Name - [Abdulmoiz Ahmer]() - abdulmoiz1996@gmail.com
 
-Project Link: [https://github.com/Abdulmoiz-Ahmer/mern-blue-print.git]()
+Project Link: [https://github.com/Abdulmoiz-Ahmer/clean-code-services.git]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
