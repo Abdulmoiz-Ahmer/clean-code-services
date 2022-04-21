@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+const config = require('../../../config');
 const Account = require('../../../db/mongodb/models/account');
 const { makeAccount } = require('../../../models/account'); // model
 const serialize = require('./serialize'); // serializer custom to db
@@ -44,6 +46,11 @@ const addAccount = async (accountInfo) => {
 		email: account.info.getEmail(),
 		password: account.info.getPassword(),
 	};
+
+	crypto
+		.createHmac('sha256', config.cryptoSecret)
+		.update(password)
+		.digest('hex');
 
 	delete account.info;
 	return {

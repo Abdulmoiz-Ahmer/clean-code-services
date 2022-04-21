@@ -16,7 +16,7 @@ services:
 
     mern-blue-print:
         build: .
-        image: 'mern-blue-print:0.3'
+        image: 'mern-blue-print:0.4'
         container_name: 'mern-blue-print-services'
         restart: on-failure
         networks:

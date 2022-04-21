@@ -1,12 +1,13 @@
 require('dotenv').config();
 
 module.exports = {
-	PORT: process.env.PORT,
+	port: process.env.PORT,
+	cryptoSecret: process.env.CRYPTO_SECRET,
 	mongo: {
 		MONGO_USER: process.env.DATABASE_USER,
 		MONGO_PWD: process.env.DATABASE_PASSWORD,
 		MONGO_PORT: process.env.DATABASE_PORT,
-		MONGO_HOST:process.env.DATABASE_SERVICE,
+		MONGO_HOST: process.env.DATABASE_SERVICE,
 	},
 	errors: {
 		StatusContinue: 100, // RFC 7231, 6.2.1
